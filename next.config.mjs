@@ -12,7 +12,7 @@ function defineNextConfig(config) {
   return config;
 }
 
-const ContentSecurityPolicy = `defautl-src 'self' vitals.vercel-insights.com`;
+const ContentSecurityPolicy = `default-src 'self' vitals.vercel-insights.com`;
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
