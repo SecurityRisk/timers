@@ -12,23 +12,23 @@ function defineNextConfig(config) {
   return config;
 }
 
-const ContentSecurityPolicy = `default-src 'self' vitals.vercel-insights.com`;
-const securityHeaders = [
-  {
-    key: "Content-Security-Policy",
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
-  },
-];
+// const ContentSecurityPolicy = `default-src 'self' vitals.vercel-insights.com`;
+// const securityHeaders = [
+//   {
+//     key: "Content-Security-Policy",
+//     value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+//   },
+// ];
 
 export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
-  headers: async () => {
-    return [
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
-    ];
-  },
+  // headers: async () => {
+  //   return [
+  //     {
+  //       source: "/:path*",
+  //       headers: securityHeaders,
+  //     },
+  //   ];
+  // },
 });
